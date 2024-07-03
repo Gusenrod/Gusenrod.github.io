@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+  backendgeneral:
+    image: backendgeneral:latest
+    build:
+      context: "D:/Septimo Ciclo/Proyecto Arquitectura de Software/RENEWOOD-main"
+    ports:
+      - "8081:8081"
+    networks:
+      - mi_red
+
+  gestionformulario:
+    image: gestionformulario:latest
+    build:
+      context: "D:/Septimo Ciclo/Proyecto Arquitectura de Software/GESTIONFORMULARIO-main"
+    ports:
+      - "8080:8080"
+    networks:
+      - mi_red
+
+  gestionformularioweb:
+    image: gestionformularioweb:latest
+    build:
+      context: "D:/Septimo Ciclo/Proyecto Arquitectura de Software/GESTIONFORMULARIO-FRONT-main"
+    ports:
+      - "3001:80"
+    networks:
+      - mi_red
+
+  renewoodfront:
+    image: renewoodfront:latest
+    build:
+      context: "D:/Septimo Ciclo/Proyecto Arquitectura de Software/RENEWOOD-FRONT-main"
+    ports:
+      - "3000:80"
+    networks:
+      - mi_red
+
+networks:
+  mi_red:
+    driver: bridge

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">JardineroPeruano</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/usuarios">usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/formularios">formularios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/valoraciones">valoraciones</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="padding: 13px;">
+
+  <mat-spinner *ngIf="formularios.length == 0"></mat-spinner>
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">ID</th>  
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Departamento</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Distrito</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Referencia</th>
+        <th scope="col">Tipo madera</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Descrpcion</th>
+        <th scope="col">Estado</th>
+        <th style="text-align:center;" scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let formulario of formularios">
+        <td>{{formulario.id}}</td>
+        <td>{{formulario.nombre}}</td>
+        <td>{{formulario.apellido}}</td>
+        <td>{{formulario.telefono}}</td>
+        <td>{{formulario.departamento}}</td>
+        <td>{{formulario.ciudad}}</td>
+        <td>{{formulario.distrito}}</td>
+        <td>{{formulario.direccion}}</td>
+        <td>{{formulario.referencia}}</td>
+        <td>{{formulario.tipomadera}}</td>
+        <td>{{formulario.cantidad}}</td>
+        <td>{{formulario.descripcion}}</td>
+        <td>{{formulario.estado}}</td>
+        <td align="center">
+          <button onClick="window.location.reload();" (click)="eliminar(formulario.id)" type="button" class="btn btn-danger">eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

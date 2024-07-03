@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">JardineroPeruano</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/usuarios">usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/formularios">formularios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="/valoraciones">valoraciones</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div style="padding: 13px;">
+
+    <mat-spinner *ngIf="valoraciones.length == 0"></mat-spinner>
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">ID</th>  
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Email</th>
+          <th scope="col">Comentario</th>
+          <th scope="col">valoración</th>
+          <th style="text-align:center;" scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let valoracion of valoraciones">
+          <td>{{valoracion.id}}</td>
+          <td>{{valoracion.nombre}}</td>
+          <td>{{valoracion.apellido}}</td>
+          <td>{{valoracion.email}}</td>
+          <td>{{valoracion.comentario}}</td>
+          <td>{{valoracion.valor}}</td>
+          <td align="center">
+            <button onClick="window.location.reload();" (click)="eliminarValoracion(valoracion.id)" type="button" class="btn btn-danger">eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>

@@ -1,0 +1,128 @@
+<div class="container">
+  <ngb-carousel>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://believe.earth/wp-content/uploads/2018/07/composteira_believeearth_pixabay.jpg" height="800" width="1700" alt="Random first slide">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://d26lpennugtm8s.cloudfront.net/stores/001/143/408/rte/CAM_2808.jpg" height="800" width="1700" alt="Random second slide">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img src="https://www.renovablesverdes.com/wp-content/uploads/2019/11/Compostera-en-el-jard%C3%ADn.jpg" height="800" width="1700" alt="Random third slide">
+      </div>
+    </ng-template>
+</ngb-carousel>
+</div>
+
+
+  <div class="container align-items-center" style="margin-top: 1rem">
+      <h1>¿Quienes Somos?</h1> 
+      <h3>Somos una empresa peruana el cual se dedica a reciclar la madera para la fabricacion de composteras
+          que sirven para procesar los residuos organicos, un reductor de materia organica orientada a producir
+          abono de calidad agricola. Nuestros 5 años en el mercado peruano nos respalda para brindar la mejor calidad 
+      </h3>
+      <h1>Nuestros Servicios</h1> 
+      <h3>Ubícanos en el km5 de la carretera Panamericana Norte e ingresar por el desvío "El Porongo", esta entrada cuenta 
+          con señalización a lo largo del camino, o ingresa por el Puente Viaducto de Salaverry.
+        </h3>
+  </div>
+
+  <div class="container align-items-center" style="margin-top: 1rem">
+    <h1>COMENTARIOS</h1>
+    <div style="padding: 13px;">
+
+      <mat-spinner *ngIf="valoraciones.length == 0"></mat-spinner>
+      <mat-card class="card w-50" *ngFor="let valoracion of valoraciones" style="margin-top: 13px;">
+      
+          <mat-card-header >
+              <mat-card-title> {{valoracion.nombre}} {{valoracion.apellido}}</mat-card-title>
+              <mat-card-subtitle>valoracion: {{valoracion.valor}}</mat-card-subtitle>
+              <mat-card-subtitle> {{valoracion.comentario}}</mat-card-subtitle>
+          </mat-card-header>
+ 
+      </mat-card>
+    </div>
+  </div>
+
+<div class="row">
+          <div class="col-sm-6">
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header">Composteras y Sustratos</div>
+              <div class="card-body">
+                <p class="card-text">Ofrecemos composteras Ecolur para el manejo de residuos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card card text-white bg-secondary mb-3" style="max-width: 18rem">
+              <div class="card-header">Capacitaciones</div>
+              <div class="card-body">
+                <p class="card-text">Compostaje y  integral de residuos sólidos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card card text-white bg-success mb-3" style="max-width: 18rem">
+              <div class="card-header">Sistemas</div>
+              <div class="card-body">
+                <p class="card-text">Diseño y establecimiento de sistemas de compostaje y huertas orgánicas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card card text-white bg-dark mb-3" style="max-width: 18rem;">
+              <div class="card-header">Aprende con nosotros</div>
+              <div class="card-body">
+                <p class="card-text">Te enseñaremos a construir tus propias cajas composteras junto a nosotros.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <h2>Preguntas frecuentes</h2> 
+        <h2> ¿Cuánto dura en descomponerse el residuo?</h2>
+        <h3>  Un promedio de 8 a 15 días, sin embargo cada caja es diferente, ya que intervienen factores diversos como las condiciones ambientales, el manejo y el tipo de residuo. Para acelerar el proceso debemos picar bien los residuos y mezclar constantemente. </h3>
+        <h2> ¿Si coloco 1.5kg de residuos diarios en cuanto tiempo se llenará la caja?</h2>
+        <h3>  Aproximadamente en 30 días. Entre más eficiente es la caja dura más en llenarse. </h3>
+        <h2> ¿Se debe voltear el compost todos los días, aunque no agregue residuos?</h2>
+        <h3>  Se recomienda mover el sustrato todos los días para activar los microorganismos y acelerar el proceso, pero no es indispensable.  </h3>
+        <h2> ¿Se puede usar cáscara de café seca para controlar la humedad de la caja?</h2>
+        <h3>  Sí, se pueden usar diversos tipos de materiales ricos en carbono como hojas secas, aserrín, borucha, bagazo de caña, pasto seco picado, granza, carbón. </h3>
+        <h2> ¿Puedo dejar varios días sin agregar residuos a mi caja?</h2>
+        <h3>  Sí, no hay ningún problema. Si es necesario se puede reactivar con alimentos fermentativos.</h3>
+        <h2> ¿Cuánto dura en descomponerse el residuo?</h2>
+        <h3>Un promedio de 8 a 15 días, sin embargo cada caja es diferente, ya que intervienen factores diversos como las condiciones ambientales, el manejo y el tipo de residuo. Para acelerar el proceso debemos picar bien los residuos y mezclar constantemente. </h3>
+
+        <table class="table table-striped table-active">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Problema</th>
+              <th scope="col">Causa</th>
+              <th scope="col">Solución</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Exceso de Humedad</td>
+              <td>Por agregar residuos no escurridos, licuados o líquidos, y por depositar más de 1,5 kg diarios.</td>
+              <td>Agregue materiales altos en carbono(secos) y mezcle bien. </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Mal olor</td>
+              <td>Las bacterias anaerobicas producen el mal olor, las cuales proliferan cuando hay poco oxígeno en la caja. Condición que aparece cuando hay exceso de humedad y mal volteo.</td>
+              <td>Agregue residuos altos en carbono(secos) y mezclar bien de abajo hacia arriba, incluyendo las esquinas. </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>No calienta</td>
+              <td>Por que no se le han gregado residuos ultimamente.Es normal que al comienzo la temperaturas sean altas y con el tiempo bajan, lo importante es que no haya mal olor en la caja.</td>
+              <td>Agregue los residuos de la cocina y mezcle bien, para oxigenar y activarlos microorganismos</td>
+            </tr>
+          </tbody>
+        </table>
